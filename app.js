@@ -261,7 +261,7 @@ router.route('/process/login').post(function(req,res){
 
 // 사용자 추가 라우팅 함수 - 클라이언트에서 보내오는 데이터를 이요해 데이터베이스에 추가
 router.route('/process/adduser').post(function(req,res){
-  console.log('/process/adduser 호출됨');
+  router.routeconsole.log('/process/adduser 호출됨');
 
   var paramId = req.body.id || req.query.id;
   var paramPassword = req.body.password || req.query.password;
