@@ -60,7 +60,7 @@ function connectDB(){
     console.log('데이터 베이스에 연결되었습니다 :' +databaseUrl);
 
     //database변수에 할당
-    database =db;
+    database =db.db('local');
   });
 }
 
@@ -91,7 +91,7 @@ router.route('/process/login').post(function(req,res){
         //조회 결과에서 사용자 이름확인
         var username = docs[0].name;
 
-        res.writeHead('200', {'Content-Type': ' text/hrml;charser=utf8'});
+        res.writeHead('200', {'Content-Type': ' text/html;charset=utf8'});
         res.write('<h1>로그인 성공 </h1>');
         res.write('<div><p>사용자 아이디 : ' +paramId+ '</p></div>');
         res.write('<div><p>사용자 이름 : ' +username+ '</p></div>');
